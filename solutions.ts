@@ -1,4 +1,4 @@
-// Solution 1:
+
 const multiplyValue = (value: number, multiplier?: number): number => {
     if(multiplier === undefined) {
         return value * 2;
@@ -6,7 +6,7 @@ const multiplyValue = (value: number, multiplier?: number): number => {
     return value * multiplier;
 };
 
-// Solution 2:
+
 type outputType = number | string;
 const processInput = (value: number | string | boolean): outputType => {
     if (typeof value === "string") {
@@ -22,7 +22,7 @@ const processInput = (value: number | string | boolean): outputType => {
     
 }
 
-// Solv-3
+
 const formatCoordinate= (coordinate: readonly [number, number, string]): string => {
     const [latitude, longitude, locationName] = coordinate;
     return `Location: ${locationName} (${latitude}, ${longitude}) `;
