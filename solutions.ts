@@ -1,9 +1,9 @@
 
-const multiplyValue = (value: number, multiplier?: number): number => {
+const multiplyValue = (value:number, multiplier?: number): number => {
     if(multiplier === undefined) {
         return value * 2;
     }
-    return value * multiplier;
+    return value *  multiplier;
 };
 
 
@@ -24,13 +24,13 @@ const processInput = (value: number | string | boolean): outputType => {
 
 
 const formatCoordinate= (coordinate: readonly [number, number, string]): string => {
-    const [latitude, longitude, locationName] = coordinate;
+    const [latitude, longitude, locationName]= coordinate;
     return `Location: ${locationName} (${latitude}, ${longitude}) `;
 }
 
 
-const concatenateArrays = <T>(...arrays: T[][]): T[] => {
-    return arrays.flat();
+const concatenateArrays =  <T>(...arrays: T[][]): T[] => {
+            return arrays.flat();
 }
 
 
@@ -39,7 +39,7 @@ interface Course{
     students: number;
     isPublished: boolean;
 }
-const getPopularCourses = (
+const getPopularCourses= (
     courses: Course[], 
     minStudents: number): Course[] => {
     return courses.filter(course => course.isPublished === true && course.students >= minStudents);
@@ -48,7 +48,7 @@ const getPopularCourses = (
 
 const pluckValues = <T,K extends keyof T>(
     items: T[],key: K
-):T[K][]=> {
+):T[K][]=>   {
 
     return items.map(item=>item[key]);
 }
@@ -68,10 +68,10 @@ class Employee{
     }
 }
 
-class Manager extends Employee{
+class Manager extends Employee    {
     private department: string;
 
-    constructor(name: string, baseSalary: number, department: string){
+    constructor(name: string,baseSalary: number, department:string){
         super(name,baseSalary);
         this.department = department;
     }
@@ -82,7 +82,7 @@ class Manager extends Employee{
 }
 
 
-const validateAgeAsync = (age: number): Promise<string>=>{
+const validateAgeAsync= (age: number): Promise<string>=>{
     return new Promise((resolve, reject)=>{
         if(age>=18){
             setTimeout(()=>{
